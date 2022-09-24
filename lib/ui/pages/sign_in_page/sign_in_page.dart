@@ -16,6 +16,7 @@ class SignInPage extends StatelessWidget {
             end: Alignment.bottomCenter,
             colors: [
               Colors.blue[300]!,
+              Colors.blueAccent[700]!,
             ],
           )),
           child: Padding(
