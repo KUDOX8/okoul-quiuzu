@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:okoul_quizu/utils/constants.dart';
 
 class UserInfoRegistrationPage extends StatelessWidget {
   const UserInfoRegistrationPage({Key? key}) : super(key: key);
@@ -14,8 +15,8 @@ class UserInfoRegistrationPage extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Colors.blue[300]!,
-              Colors.blueAccent[700]!,
+              backgroundColor1,
+              backgroundColor2,
             ],
           )),
           child: Padding(
@@ -26,11 +27,10 @@ class UserInfoRegistrationPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('QuizU',
-                        style: TextStyle(
-                            fontSize: 50.sp,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white))
+                    Text(
+                      'QuizU',
+                      style: titleTextStyle,
+                    )
                   ],
                 ),
                 50.verticalSpace,
@@ -48,10 +48,10 @@ class UserInfoRegistrationPage extends StatelessWidget {
                           hintText: 'abc',
                           label: const Text('Name'),
                           floatingLabelBehavior: FloatingLabelBehavior.never,
-                          hintStyle: TextStyle(fontSize: 18.sp),
-                          labelStyle: TextStyle(fontSize: 18.sp),
+                          hintStyle: normalTextStyle,
+                          labelStyle: normalTextStyle,
                         ),
-                        style: TextStyle(fontSize: 18.sp),
+                        style: normalTextStyle,
                       ),
                     ],
                   ),
@@ -59,18 +59,8 @@ class UserInfoRegistrationPage extends StatelessWidget {
                 30.verticalSpace,
                 ElevatedButton(
                   onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      primary: Colors.amberAccent[400],
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      elevation: 0,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 60.w, vertical: 20.h)),
-                  child: Text('Verify',
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.bold,
-                      )),
+                  style: buttonStyle,
+                  child: Text('Verify', style: textInButtonStyle),
                 )
               ],
             ),

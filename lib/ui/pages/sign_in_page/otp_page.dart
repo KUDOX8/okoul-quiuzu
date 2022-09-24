@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:okoul_quizu/utils/constants.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_field_style.dart';
 import 'package:otp_text_field/style.dart';
@@ -22,8 +23,8 @@ class _OTPPageState extends State<OTPPage> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Colors.blue[300]!,
-              Colors.blueAccent[700]!,
+              backgroundColor1,
+              backgroundColor2,
             ],
           )),
           child: Padding(
@@ -33,17 +34,11 @@ class _OTPPageState extends State<OTPPage> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('QuizU',
-                        style: TextStyle(
-                            fontSize: 50.sp,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white))
-                  ],
+                  children: [Text('QuizU', style: titleTextStyle)],
                 ),
                 50.verticalSpace,
                 Text('Please enter the OTP sent to +9665xxxxxxxx',
-                    style: TextStyle(fontSize: 18.sp, color: Colors.white)),
+                    style: normalTextStyle),
                 30.verticalSpace,
                 OTPTextField(
                   width: 350.w,
@@ -62,18 +57,8 @@ class _OTPPageState extends State<OTPPage> {
                 30.verticalSpace,
                 ElevatedButton(
                   onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      primary: Colors.amberAccent[400],
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      elevation: 0,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 60.w, vertical: 20.h)),
-                  child: Text('Verify',
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.bold,
-                      )),
+                  style: buttonStyle,
+                  child: Text('Verify', style: textInButtonStyle),
                 )
               ],
             ),

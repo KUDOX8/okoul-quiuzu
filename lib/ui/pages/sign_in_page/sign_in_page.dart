@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../utils/constants.dart';
+
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
 
@@ -15,8 +17,8 @@ class SignInPage extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Colors.blue[300]!,
-              Colors.blueAccent[700]!,
+              backgroundColor1,
+              backgroundColor2,
             ],
           )),
           child: Padding(
@@ -26,13 +28,7 @@ class SignInPage extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('QuizU',
-                        style: TextStyle(
-                            fontSize: 50.sp,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white))
-                  ],
+                  children: [Text('QuizU', style: titleTextStyle)],
                 ),
                 50.verticalSpace,
                 Row(
@@ -41,10 +37,10 @@ class SignInPage extends StatelessWidget {
                   children: [
                     SvgPicture.asset('icons/saudi_arabia_flag_icon.svg',
                         height: 25.h, width: 25.w),
-                    SizedBox(width: 5.w),
+                    5.horizontalSpace,
                     Text(
                       '(+966)',
-                      style: TextStyle(fontSize: 18.sp),
+                      style: normalTextStyle,
                     ),
                     10.horizontalSpace,
                     SizedBox(
@@ -60,10 +56,10 @@ class SignInPage extends StatelessWidget {
                           hintText: '5xxxxxxxx',
                           label: const Text('Phone Number'),
                           floatingLabelBehavior: FloatingLabelBehavior.never,
-                          hintStyle: TextStyle(fontSize: 18.sp),
-                          labelStyle: TextStyle(fontSize: 18.sp),
+                          hintStyle: normalTextStyle,
+                          labelStyle: normalTextStyle,
                         ),
-                        style: TextStyle(fontSize: 18.sp),
+                        style: normalTextStyle,
                       ),
                     ),
                   ],
@@ -71,18 +67,8 @@ class SignInPage extends StatelessWidget {
                 30.verticalSpace,
                 ElevatedButton(
                   onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                      primary: Colors.amberAccent[400],
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                      elevation: 0,
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 60.w, vertical: 20.h)),
-                  child: Text('Contuniue',
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.bold,
-                      )),
+                  style: buttonStyle,
+                  child: Text('Contuniue', style: textInButtonStyle),
                 )
               ],
             ),
