@@ -29,3 +29,20 @@ ButtonStyle buttonStyle = ElevatedButton.styleFrom(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     elevation: 0,
     padding: EdgeInsets.symmetric(horizontal: 60.w, vertical: 20.h));
+
+// Button Styles Section End //
+
+// Routes Section Start //
+
+const String homePage = '/';
+const String finishQuizPage = '/finishQuizPage';
+const String leaderboardPage = '/leaderboardPage';
+const String profilePage = '/profilePage';
+const String questionPage = '/questionPage';
+const String userInfoRegistrationPage = '/userInfoRegistrationPage';
+const String signInPage = '/signInPage';
+const String otpPage = '/otpPage';
+const String settingsPage = '/settingsPage';
+
+
+// Routes Section End //

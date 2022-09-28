@@ -69,7 +69,7 @@ class SignInPage extends StatelessWidget {
                   onPressed: () {},
                   style: buttonStyle,
                   child: Text('Contuniue', style: textInButtonStyle),
-                )
+                ),
               ],
             ),
           ),
