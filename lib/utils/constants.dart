@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Colors Section Start //
+const Color black = Colors.black;
+const Color grey = Colors.grey;
+const Color white = Colors.white;
 Color backgroundColor1 = Colors.blue[300]!;
 Color backgroundColor2 = Colors.blueAccent[700]!;
 

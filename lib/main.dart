@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:okoul_quizu/ui/pages/home_page/home_page.dart';
 import 'package:okoul_quizu/ui/pages/sign_in_page/otp_page.dart';
 import 'package:okoul_quizu/ui/pages/sign_in_page/sign_in_page.dart';
 import 'package:okoul_quizu/ui/pages/user_info_registration_page/user_info_registration_page.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: (BuildContext context, Widget? child) {
         return const MaterialApp(
-          home: UserInfoRegistrationPage(),
+          home: HomePage(),
         );
       },
       designSize: const Size(500, 744),
