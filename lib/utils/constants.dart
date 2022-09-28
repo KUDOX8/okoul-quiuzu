@@ -42,7 +42,7 @@ const String questionPage = '/questionPage';
 const String userInfoRegistrationPage = '/userInfoRegistrationPage';
 const String signInPage = '/signInPage';
 const String otpPage = '/otpPage';
-const String settingsPage = '/settingsPage';
+const String wrongRoutePage = '/wrongRoutePage';
 
 
 // Routes Section End //
